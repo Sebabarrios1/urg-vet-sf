@@ -159,13 +159,13 @@ export default function App() {
       <nav className="bg-[#2B5289] w-full border-b border-white/10">
         <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 text-white no-underline">
-            <div className="bg-white rounded-xl p-0.5 shrink-0 overflow-hidden flex items-center justify-center w-[48px] h-[48px]">
+            <div className="bg-white rounded-xl p-1 shrink-0 flex items-center justify-center w-[48px] h-[48px] overflow-hidden">
               <Image
                 src="/images/logo.jpg"
                 alt="Logo Urgencias Veterinarias SF"
                 width={48}
                 height={48}
-                className="object-contain"
+                className="w-full h-full object-cover scale-110"
               />
             </div>
             <div className="font-bold text-[15px] tracking-wide leading-tight">
