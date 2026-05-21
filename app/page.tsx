@@ -1,7 +1,9 @@
-import React from 'react';
+'use client';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import PetCarousel from '@/components/PetCarousel';
 import LoadingScreen from '@/components/LoadingScreen';
+
 
 import {
   BellRing, Clock, HeartPulse, Microscope,
@@ -146,6 +148,7 @@ const FAQS = [
 ];
 
 export default function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const WHATSAPP_NUMBER = "5493425110131";
   const PHONE_NUMBER = "3425110131";
 
@@ -179,10 +182,16 @@ export default function App() {
             <a href="#faq" className="text-white/85 hover:text-white font-semibold text-base transition-colors">Preguntas</a>
           </div>
 
-          <button className="md:hidden text-white"><Menu size={28} /></button>
+          <button className="md:hidden text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}><Menu size={28} /></button>
         </div>
       </nav>
-
+      {isMenuOpen && (
+        <div className="md:hidden bg-[#2B5289] border-b border-white/10 p-6 flex flex-col gap-4">
+          <a href="#servicios" className="text-white font-semibold text-lg" onClick={() => setIsMenuOpen(false)}>Servicios</a>
+          <a href="#equipo" className="text-white font-semibold text-lg" onClick={() => setIsMenuOpen(false)}>Equipo</a>
+          <a href="#faq" className="text-white font-semibold text-lg" onClick={() => setIsMenuOpen(false)}>Preguntas</a>
+        </div>
+      )}
       {/* HERO FULL WIDTH */}
       <section
         className="w-full bg-[#2B5289] relative overflow-hidden"
