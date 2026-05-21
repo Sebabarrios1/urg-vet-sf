@@ -161,7 +161,7 @@ export default function App() {
           <a href="#" className="flex items-center gap-3 text-white no-underline">
             <div className="bg-white rounded-xl p-0.5 shrink-0 overflow-hidden flex items-center justify-center w-[48px] h-[48px]">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.jpg"
                 alt="Logo Urgencias Veterinarias SF"
                 width={48}
                 height={48}
