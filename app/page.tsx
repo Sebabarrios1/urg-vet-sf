@@ -17,7 +17,7 @@ import {
 const SERVICES = [
   {
     title: "Urgencias 24/7",
-    desc: "Atención inmediata sin turno previo, todos los días del año, feriados incluidos.",
+    desc: "Atención inmediata, todos los días del año, feriados incluidos.",
     icon: <BellRing size={24} />,
     urgent: true
   },
@@ -149,8 +149,9 @@ const FAQS = [
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const WHATSAPP_NUMBER = "5493425110131";
-  const PHONE_NUMBER = "3425110131";
+  const WHATSAPP_NUMBER = "5493425502341";
+
+  const PHONE_NUMBER = "3425502341";
 
   return (
     <div className="font-sans min-h-screen bg-white" style={{ fontFamily: "'League Spartan', sans-serif" }}>
