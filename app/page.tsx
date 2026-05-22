@@ -365,7 +365,7 @@ export default function App() {
               </div>
               <div>
                 <div className="text-[11px] font-bold text-[#555] tracking-widest mb-1">LLAMADAS / URGENCIAS</div>
-                <div className="text-lg md:text-xl font-bold text-[#1A1A1A]">342 511-0131</div>
+                <div className="text-lg md:text-xl font-bold text-[#1A1A1A]">3425502341</div>
               </div>
             </a>
 
