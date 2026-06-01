@@ -249,10 +249,10 @@ export default function App() {
         <div className="max-w-6xl mx-auto px-6 py-16 md:py-24 flex flex-col md:flex-row relative z-10 items-center">
           <div className="flex-1 max-w-2xl">
             <h1 className="text-white text-5xl md:text-7xl font-black leading-[1.05] mb-6">
-              Urgencias veterinarias Santa Fe.
+              Urgencias Veterinarias Santa Fe.
             </h1>
             <p className="text-white/90 text-lg md:text-xl font-medium mb-10 max-w-lg">
-              Estabilizamos pacientes críticos las 24 horas. Clínica general y emergentología con equipo multidisciplinario.
+              Atención inmediata para perros y gatos. Urgencias, internación y clínica general las 24 hs.
             </p>
             <div className="flex flex-col md:flex-row gap-4">
               <a href={`tel:${PHONE_NUMBER}`} className="bg-[#DB1E26] hover:bg-[#c51921] text-white text-lg font-extrabold py-4 px-8 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-red-900/40 transition-transform hover:-translate-y-1">
