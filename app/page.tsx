@@ -91,7 +91,7 @@ const TEAM = [
     type: "clinic",
     icon: <Sunset size={14} />,
     color: "bg-[#3a6090]",
-    img: null,
+    img: "/images/Luis_Prieto.jpeg",
     facePos: "center top"
   },
   {
