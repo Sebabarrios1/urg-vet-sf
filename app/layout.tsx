@@ -59,10 +59,10 @@ export default function RootLayout({
   ].join(" ");
 
   return (
-
-
-    { children }
-
-
+    <html lang="es">
+      <body className={bodyClasses}>
+        {children}
+      </body>
+    </html>
   );
 }
