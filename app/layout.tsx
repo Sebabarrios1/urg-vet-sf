@@ -12,7 +12,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Configuración SEO optimizada
 export const metadata: Metadata = {
   title: "Urgencias Veterinarias Santa Fe | Atención 24 Horas",
   description: "Clínica veterinaria en Santa Fe. Atención de urgencias 24 horas, internación (UCI), cirugías, ecografías y laboratorio clínico. Especialistas en caninos y felinos.",
@@ -59,7 +58,6 @@ export default function RootLayout({
     "antialiased"
   ].join(" ");
 
-  // CORRECCIÓN: Se agregaron las etiquetas html y body obligatorias
   return (
 
 
