@@ -288,7 +288,7 @@ export default function App() {
             <div className="text-white/60 text-[11px] font-bold uppercase tracking-widest mt-1">En Santa Fe</div>
           </div>
           <div className="p-6 text-center">
-            <div className="text-white text-3xl font-black flex items-center justify-center gap-2"><Star className="text-yellow-400 fill-yellow-400" size={24} /> 4.8</div>
+            <div className="text-white text-3xl font-black flex items-center justify-center gap-2"><Star className="text-yellow-400 fill-yellow-400" size={24} /> 4.3</div>
             <div className="text-white/60 text-[11px] font-bold uppercase tracking-widest mt-1">Calificación Google</div>
           </div>
         </div>
