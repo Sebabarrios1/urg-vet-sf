@@ -11,6 +11,32 @@ import {
 import Image from 'next/image';
 
 // --- DATOS ACTUALIZADOS ---
+const PETS = [
+  { name: "Ámbar Favini", img: "/images/Ámbar Favini.jpeg" },
+  { name: "Helvetica Rodríguez", img: "/images/Helvetica Rodríguez.jpeg" },
+  { name: "Saori Gallotto", img: "/images/Saori Gallotto.jpeg" },
+  { name: "Aurora Gallotto", img: "/images/Aurora Gallotto.jpeg" },
+  { name: "Pancho Fridman", img: "/images/Pancho Fridman.jpeg" },
+  { name: "Raul Leopold", img: "/images/Raul Leopold.jpeg" },
+  { name: "Coco Paye", img: "/images/Coco Paye.jpeg" },
+  { name: "Loli Delvo", img: "/images/Loli Delvo.jpeg" },
+  { name: "Dracco Sesma", img: "/images/Dracco Sesma.jpeg" },
+  { name: "Cleo Sambade", img: "/images/Cleo Sambade.jpeg" },
+  { name: "Kakashi Silvestrini", img: "/images/Kakashi Silvestrini.jpeg" },
+  { name: "Carpuza Beutel", img: "/images/Carpuza Beutel.jpeg" },
+  { name: "Roma Beutel", img: "/images/Roma Beutel.jpeg" },
+  { name: "Cuasimodo", img: "/images/Cuasimodo.jpeg" },
+  { name: "Umma Martínez", img: "/images/Umma Martínez.jpeg" },
+  { name: "Martina Basualdo", img: "/images/Martina Basualdo.jpeg" },
+  { name: "Rumi Nicola", img: "/images/Rumi Nicola.jpeg" },
+  { name: "Nova Pintos", img: "/images/Nova Pintos.jpeg" },
+  { name: "Olivia Angelini", img: "/images/Olivia Angelini.jpeg" },
+  { name: "Jagger Villalobos", img: "/images/Jagger Villalobos.jpeg" },
+  { name: "Kitty Anacabe", img: "/images/Kitty Anacabe.jpeg" },
+  { name: "Aquiles Ramírez", img: "/images/Aquiles Ramírez.jpeg" },
+  { name: "Minerva Rotela", img: "/images/Minerva Rotela.jpeg" },
+  { name: "Rocky Sastre", img: "/images/Rocky Sastre.jpeg" }
+];
 
 const SERVICES = [
   {
@@ -145,14 +171,6 @@ const URGENCY_SIGNS = [
   "Falta de apetito y decaimiento."
 ];
 
-const PETS = [
-
-  { name: "Caninos", img: "/images/perro.jpg" },
-
-  { name: "Felinos", img: "/images/gato.jpg" }
-
-];
-<PetCarousel />
 
 function LoadingScreen() {
   const [loading, setLoading] = useState(true);
@@ -192,6 +210,11 @@ function PetCarousel() {
                   src={pet.img}
                   alt={pet.name}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  // CORRECCIÓN AQUÍ: Convertimos el target a HTMLImageElement
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = 'https://via.placeholder.com/160?text=No+Imagen';
+                  }}
                 />
                 <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
                   <p className="text-white text-3xl font-black tracking-wide">{pet.name}</p>
