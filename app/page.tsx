@@ -145,6 +145,13 @@ const URGENCY_SIGNS = [
   "Falta de apetito y decaimiento."
 ];
 
+const PETS = [
+
+  { name: "Caninos", img: "/images/perro.jpg" },
+
+  { name: "Felinos", img: "/images/gato.jpg" }
+
+];
 <PetCarousel />
 
 function LoadingScreen() {

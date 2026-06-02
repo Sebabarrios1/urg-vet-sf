@@ -4,7 +4,7 @@ import React from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import Image from 'next/image';
 
-// --- LISTADO DE PACIENTES (24 FOTOS PROCESADAS) ---
+// Esta constante debe vivir en el mismo archivo que el componente
 const PETS = [
     { name: "Simba Parra", img: "/images/paciente1.jpg" },
     { name: "Félix Ledezma", img: "/images/paciente2.jpg" },
@@ -33,7 +33,6 @@ const PETS = [
 ];
 
 export default function PetCarousel() {
-    // Configuramos el carrusel para que se mueva suave y muestre varias fotos
     const [emblaRef] = useEmblaCarousel({
         loop: true,
         align: 'start',
@@ -67,7 +66,6 @@ export default function PetCarousel() {
                                     sizes="(max-width: 768px) 85vw, (max-width: 1200px) 30vw, 25vw"
                                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
-                                {/* Degradado para que el nombre se lea bien siempre */}
                                 <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
                                     <p className="text-white text-xl font-bold tracking-wide mb-0">
                                         {pet.name.split(' ')[0]}
