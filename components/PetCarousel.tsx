@@ -46,12 +46,10 @@ function PetCarousel() {
                 <h3 className="text-3xl font-black text-[#2B5289]">Nuestros Pacientes</h3>
             </div>
 
-            {/* Añadimos un contenedor con ancho relativo */}
             <div className="overflow-hidden w-full" ref={emblaRef}>
-                <div className="flex gap-4 px-6">
+                <div className="flex touch-pan-y">
                     {PETS.map((pet, idx) => (
-                        // flex-[0_0_100%] en móvil, flex-[0_0_25%] (4 por fila) en escritorio
-                        <div key={idx} className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0">
+                        <div key={idx} className="flex-none w-full md:w-1/4 min-w-0 px-3">
                             <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg bg-gray-200">
                                 <img
                                     src={pet.img}
@@ -59,11 +57,11 @@ function PetCarousel() {
                                     className="w-full h-full object-cover"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
-                                        target.src = 'https://via.placeholder.com/300';
+                                        target.src = 'https://via.placeholder.com/300?text=Sin+Imagen';
                                     }}
                                 />
                                 <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
-                                    <p className="text-white font-black truncate">{pet.name}</p>
+                                    <p className="text-white font-black truncate text-xl">{pet.name}</p>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +71,6 @@ function PetCarousel() {
         </section>
     );
 }
-
 export default function App() {
     return (
         <div className="font-sans min-h-screen bg-white">
