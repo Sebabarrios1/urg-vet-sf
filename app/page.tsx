@@ -10,7 +10,6 @@ import {
 } from 'lucide-react';
 import Image from 'next/image';
 
-// --- DATOS ACTUALIZADOS ---
 const PETS = [
   { name: "Ámbar Favini", img: "/images/Ámbar Favini.jpeg" },
   { name: "Helvetica Rodríguez", img: "/images/Helvetica Rodríguez.jpeg" },
@@ -39,115 +38,27 @@ const PETS = [
 ];
 
 const SERVICES = [
-  {
-    title: "URGENCIAS 24 HORAS",
-    desc: "Atención inmediata todos los días del año, incluidos feriados.",
-    icon: <BellRing size={24} />,
-    urgent: true
-  },
-  {
-    title: "UCI · INTERNACIÓN",
-    desc: "Unidad de cuidados intensivos con monitoreo constante y atención veterinaria permanente.",
-    icon: <HeartPulse size={24} />,
-    urgent: true
-  },
-  {
-    title: "CIRUGÍAS",
-    desc: "Quirófano equipado y coordinación con especialistas para cirugías programadas y urgencias.",
-    icon: <Scissors size={24} />,
-    urgent: false
-  },
-  {
-    title: "LABORATORIO CLÍNICO",
-    desc: "Análisis y diagnóstico rápido con equipamiento propio.",
-    icon: <Microscope size={24} />,
-    urgent: false
-  },
-  {
-    title: "CLÍNICA GENERAL",
-    desc: "Controles, vacunación, desparasitación y seguimiento clínico.",
-    icon: <Syringe size={24} />,
-    urgent: false
-  }
+  { title: "URGENCIAS 24 HORAS", desc: "Atención inmediata todos los días del año, incluidos feriados.", icon: <BellRing size={24} />, urgent: true },
+  { title: "UCI · INTERNACIÓN", desc: "Unidad de cuidados intensivos con monitoreo constante y atención veterinaria permanente.", icon: <HeartPulse size={24} />, urgent: true },
+  { title: "CIRUGÍAS", desc: "Quirófano equipado y coordinación con especialistas para cirugías programadas y urgencias.", icon: <Scissors size={24} />, urgent: false },
+  { title: "LABORATORIO CLÍNICO", desc: "Análisis y diagnóstico rápido con equipamiento propio.", icon: <Microscope size={24} />, urgent: false },
+  { title: "CLÍNICA GENERAL", desc: "Controles, vacunación, desparasitación y seguimiento clínico.", icon: <Syringe size={24} />, urgent: false }
 ];
 
 const SPECIALTIES = [
-  { title: "ECOGRAFÍA", desc: "Diagnóstico por imágenes mediante ecografías.", icon: <Monitor size={20} /> },
-  { title: "DERMATOLOGÍA", desc: "Diagnóstico y tratamiento de enfermedades de la piel.", icon: <Stethoscope size={20} /> },
-  { title: "CARDIOLOGÍA", desc: "Evaluación cardiológica y estudios especializados.", icon: <Activity size={20} /> }
+  { title: "ECOGRAFÍA", specialist: "Tamara Silvetti", desc: "Diagnóstico por imágenes mediante ecografías.", icon: <Monitor size={20} /> },
+  { title: "DERMATOLOGÍA", specialist: "Valeria Gálvez", desc: "Diagnóstico y tratamiento de enfermedades de la piel.", icon: <Stethoscope size={20} /> },
+  { title: "CARDIOLOGÍA", specialist: "Nicolás Picciochi", desc: "Evaluación cardiológica y estudios especializados.", icon: <Activity size={20} /> }
 ];
 
 const TEAM = [
-  {
-    name: "Yanina Parra",
-    role: "Jefa de área Clínica",
-    shift: "Turno mañana",
-    type: "clinic",
-    icon: <Sun size={14} />,
-    color: "bg-[#2B5289]",
-    img: "/images/yanina_parra_.jpeg",
-    facePos: "center 15%"
-  },
-  {
-    name: "Antonella Ledezma",
-    role: "Veterinaria Clínica",
-    shift: "Turno mañana",
-    type: "clinic",
-    icon: <Sun size={14} />,
-    color: "bg-[#4A75B0]",
-    img: "/images/antonella_ledezma_.jpeg",
-    facePos: "center 10%"
-  },
-  {
-    name: "Juan Del Prete",
-    role: "Veterinario Clínico",
-    shift: "Clínica General",
-    type: "clinic",
-    icon: <Briefcase size={14} />,
-    color: "bg-[#1a3a5c]",
-    img: "/images/juan_del_prete_.jpeg",
-    facePos: "center 5%" // Ajustado para evitar "agujeritos"
-  },
-  {
-    name: "Luis Prieto",
-    role: "Veterinario Clínico",
-    shift: "Turno tarde",
-    type: "clinic",
-    icon: <Sunset size={14} />,
-    color: "bg-[#3a6090]",
-    img: "/images/Luis_Prieto.jpeg",
-    facePos: "center top"
-  },
-  {
-    name: "Federico Modini",
-    role: "Veterinario Internista",
-    shift: "Turno tarde",
-    type: "emergent",
-    icon: <Sunset size={14} />,
-    color: "bg-[#b8171f]",
-    img: "/images/Federico_Modini.jpeg",
-    facePos: "center 10%"
-  },
-  {
-    name: "Eliana Ramírez",
-    role: "Jefa de internación y coordinadora general",
-    shift: "Guardia nocturna",
-    type: "emergent",
-    icon: <Moon size={14} />,
-    color: "bg-[#DB1E26]",
-    img: "/images/eliana_ramirez.jpeg",
-    facePos: "center 12%"
-  },
-  {
-    name: "Juan Torti",
-    role: "Veterinario internista y emergentólogo",
-    shift: "Guardia nocturna",
-    type: "emergent",
-    icon: <Moon size={14} />,
-    color: "bg-[#8c1116]",
-    img: "/images/Juan_Torti.jpeg",
-    facePos: "center 20%" // Ajustado para limpiar fondo/puerta
-  }
+  { name: "Yanina Parra", role: "Jefa de área Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, color: "bg-[#2B5289]", img: "/images/yanina_parra_.jpeg", facePos: "center 15%" },
+  { name: "Antonella Ledezma", role: "Veterinaria Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, color: "bg-[#4A75B0]", img: "/images/antonella_ledezma_.jpeg", facePos: "center 10%" },
+  { name: "Juan Del Prete", role: "Veterinario Clínico", shift: "Turno mañana/tarde", type: "clinic", icon: <Briefcase size={14} />, color: "bg-[#1a3a5c]", img: "/images/juan_del_prete_.jpeg", facePos: "center 5%" },
+  { name: "Luis Prieto", role: "Veterinario Clínico", shift: "Turno tarde", type: "clinic", icon: <Sunset size={14} />, color: "bg-[#3a6090]", img: "/images/Luis_Prieto.jpeg", facePos: "center top" },
+  { name: "Federico Modini", role: "Veterinario Internista", shift: "Turno tarde", type: "emergent", icon: <Sunset size={14} />, color: "bg-[#b8171f]", img: "/images/Federico_Modini.jpeg", facePos: "center 10%" },
+  { name: "Eliana Ramírez", role: "Jefa de internación y coordinadora general", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, color: "bg-[#DB1E26]", img: "/images/eliana_ramirez.jpeg", facePos: "center 12%" },
+  { name: "Juan Torti", role: "Veterinario internista y emergentólogo", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, color: "bg-[#8c1116]", img: "/images/Juan_Torti.jpeg", facePos: "center 20%" }
 ];
 
 const FAQS = [
@@ -156,8 +67,7 @@ const FAQS = [
   { q: "¿Trabajan feriados?", a: "Sí, trabajamos los 365 días del año, incluyendo feriados nacionales y fiestas, manteniendo atención veterinaria permanente." },
   { q: "¿Tienen internación?", a: "Contamos con una Unidad de Cuidados Intensivos (UCI) totalmente equipada para el monitoreo de pacientes que requieren hospitalización." },
   { q: "¿Atienden perros y gatos?", a: "Sí, nos especializamos exclusivamente en medicina canina y felina para brindar la mejor atención enfocada." },
-  { q: "¿Realizan análisis?", a: "Contamos con laboratorio clínico propio para obtener resultados de diagnósticos rápidos en situaciones de urgencia." },
-  { q: "¿Se coordinan derivaciones?", a: "Sí, coordinamos derivaciones con especialistas como Tamara Silvetti, Nicolás Picciochi y Valeria Gálvez para interconsultas específicas." }
+  { q: "¿Realizan análisis?", a: "Contamos con laboratorio clínico propio para obtener resultados de diagnósticos rápidos en situaciones de urgencia." }
 ];
 
 const URGENCY_SIGNS = [
@@ -170,7 +80,6 @@ const URGENCY_SIGNS = [
   "Sangrados.",
   "Falta de apetito y decaimiento."
 ];
-
 
 function LoadingScreen() {
   const [loading, setLoading] = useState(true);
@@ -201,23 +110,22 @@ function PetCarousel() {
       <div className="max-w-6xl mx-auto px-6 mb-10">
         <h3 className="text-3xl font-black text-[#2B5289]">Nuestros Pacientes</h3>
       </div>
-      <div className="overflow-hidden px-6" ref={emblaRef}>
-        <div className="flex gap-6 max-w-4xl mx-auto">
+      <div className="overflow-hidden w-full" ref={emblaRef}>
+        <div className="flex touch-pan-y">
           {PETS.map((pet, idx) => (
-            <div key={idx} className="flex-1 min-w-0">
-              <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg group bg-gray-200">
+            <div key={idx} className="px-3" style={{ flex: '0 0 300px', minWidth: 0 }}>
+              <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg bg-gray-200">
                 <img
                   src={pet.img}
                   alt={pet.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  // CORRECCIÓN AQUÍ: Convertimos el target a HTMLImageElement
+                  className="w-full h-full object-cover"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = 'https://via.placeholder.com/160?text=No+Imagen';
+                    target.src = 'https://via.placeholder.com/300?text=Sin+Imagen';
                   }}
                 />
-                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
-                  <p className="text-white text-3xl font-black tracking-wide">{pet.name}</p>
+                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <p className="text-white font-black truncate text-xl">{pet.name}</p>
                 </div>
               </div>
             </div>
@@ -233,12 +141,13 @@ export default function App() {
   const WHATSAPP_NUMBER = "5493425502341";
   const PHONE_NUMBER = "3425502341";
 
+  const WHATSAPP_TEXT = encodeURIComponent("¡Hola! Me comunico desde la página web para realizar una consulta.");
+
   return (
     <div className="font-sans min-h-screen bg-white" style={{ fontFamily: "'League Spartan', sans-serif" }}>
       <LoadingScreen />
       <style dangerouslySetInnerHTML={{ __html: "@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap');" }} />
 
-      {/* NAVEGACIÓN */}
       <nav className="bg-[#2B5289] w-full border-b border-white/10 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 text-white no-underline">
@@ -258,7 +167,6 @@ export default function App() {
         </div>
       </nav>
 
-      {/* MENÚ MÓVIL */}
       {isMenuOpen && (
         <div className="md:hidden fixed inset-0 z-50 bg-[#2B5289] p-6 flex flex-col gap-6">
           <button className="self-end text-white" onClick={() => setIsMenuOpen(false)}><Menu size={28} /></button>
@@ -268,8 +176,6 @@ export default function App() {
         </div>
       )}
 
-      { }
-      {/* HERO SECTION */}
       <section className="w-full bg-[#2B5289] relative overflow-hidden" style={{
         backgroundImage: `linear-gradient(90deg, rgba(43, 82, 137, 0.95) 0%, rgba(43, 82, 137, 0.85) 45%, rgba(43, 82, 137, 0.3) 100%), url('https://images.unsplash.com/photo-1599443015574-be5fe8a05783?auto=format&fit=crop&w=1920&q=80')`,
         backgroundSize: 'cover', backgroundPosition: 'center'
@@ -299,8 +205,6 @@ export default function App() {
         </div>
       </section>
 
-      { }
-      {/* MÉTRICAS DE CONFIANZA */}
       <div className="w-full bg-[#1a3a5c] border-b border-white/10">
         <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4">
           <div className="p-6 text-center border-r border-white/10 border-b md:border-b-0">
@@ -322,7 +226,7 @@ export default function App() {
         </div>
       </div>
 
-      {/* SECCIÓN NUESTRAS ÁREAS */}
+      {/* SECCIÓN 1: SERVICIOS */}
       <section id="servicios" className="w-full py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-black text-[#2B5289] mb-12 uppercase tracking-tight">Nuestras Áreas</h2>
@@ -338,64 +242,14 @@ export default function App() {
         </div>
       </section>
 
-      {/* NUEVA SECCIÓN ESPECIALIDADES */}
-      <section className="w-full py-12 bg-gray-50 border-y border-gray-200">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-8">
-            <h3 className="text-2xl font-black text-[#2B5289]">Especialidades Médicas</h3>
-            <p className="text-gray-600 font-semibold text-lg mt-2">Atención con profesionales externos especializados y turnos programados gestionados por la clínica.</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {SPECIALTIES.map((spec, i) => (
-              <div key={i} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex items-center gap-4">
-                <div className="text-[#DB1E26]">{spec.icon}</div>
-                <div>
-                  <h4 className="font-black text-sm text-gray-800 uppercase">{spec.title}</h4>
-                  <p className="text-xs text-gray-500 font-medium">{spec.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      { }
-      {/* SECCIÓN EDUCATIVA: ¿QUÉ ES UNA URGENCIA? */}
-      <section className="w-full py-16 bg-white">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="bg-[#fff0f1] rounded-3xl p-8 md:p-12 border-2 border-[#DB1E26]/20 shadow-sm">
-            <h2 className="text-3xl md:text-4xl font-black text-[#DB1E26] mb-6 flex items-center gap-3">
-              <AlertCircle size={32} /> ¿Qué es una urgencia?
-            </h2>
-            <p className="text-gray-800 font-bold text-lg mb-8">Si tu mascota presenta alguno de estos signos, acudí inmediatamente:</p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
-              {URGENCY_SIGNS.map((sign, i) => (
-                <div key={i} className="flex items-start gap-3 text-base font-semibold text-gray-700">
-                  <Zap size={20} className="text-[#DB1E26] shrink-0 mt-1" /> {sign}
-                </div>
-              ))}
-            </div>
-            <div className="mt-10 p-4 bg-white rounded-xl border border-[#DB1E26]/10 inline-block">
-              <p className="text-base font-bold text-[#2B5289] italic m-0">
-                "Ante cualquier duda, recomendamos comunicarse con la clínica para poder orientarte."
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* NUESTROS PACIENTES */}
-      <PetCarousel />
-
-      { }
-      {/* EQUIPO */}
-      <section id="equipo" className="w-full bg-white py-16 md:py-24 border-t border-gray-200">
+      {/* SECCIÓN 2: EQUIPO (Movido aquí) */}
+      <section id="equipo" className="w-full bg-gray-50 py-16 md:py-24 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-black text-[#2B5289] mb-4">Conocé a nuestro equipo</h2>
           <p className="text-gray-600 font-bold text-lg mb-12">Profesionales comprometidos con la atención clínica y de urgencias las 24 horas.</p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {TEAM.map((member, idx) => (
-              <div key={idx} className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm flex border border-gray-200">
+              <div key={idx} className="bg-white rounded-2xl overflow-hidden shadow-sm flex border border-gray-200">
                 <div className="w-32 bg-gray-200 shrink-0 relative">
                   {member.img && (
                     <img
@@ -422,8 +276,53 @@ export default function App() {
         </div>
       </section>
 
-      { }
-      {/* FAQ */}
+      {/* SECCIÓN 3: ESPECIALIDADES (Movido aquí y actualizado con nombres) */}
+      <section className="w-full py-16 bg-white border-y border-gray-200">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-8">
+            <h3 className="text-2xl font-black text-[#2B5289]">Especialidades Médicas</h3>
+            <p className="text-gray-600 font-semibold text-lg mt-2">Atención con profesionales externos especializados y turnos programados gestionados por la clínica.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {SPECIALTIES.map((spec, i) => (
+              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 flex items-start gap-4">
+                <div className="text-[#DB1E26] mt-1">{spec.icon}</div>
+                <div>
+                  <h4 className="font-black text-base text-gray-800 uppercase">{spec.title}</h4>
+                  <p className="text-sm text-[#2B5289] font-black mt-1 mb-2">{spec.specialist}</p>
+                  <p className="text-xs text-gray-500 font-medium leading-relaxed">{spec.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full py-16 bg-white">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="bg-[#fff0f1] rounded-3xl p-8 md:p-12 border-2 border-[#DB1E26]/20 shadow-sm">
+            <h2 className="text-3xl md:text-4xl font-black text-[#DB1E26] mb-6 flex items-center gap-3">
+              <AlertCircle size={32} /> ¿Qué es una urgencia?
+            </h2>
+            <p className="text-gray-800 font-bold text-lg mb-8">Si tu mascota presenta alguno de estos signos, acudí inmediatamente:</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
+              {URGENCY_SIGNS.map((sign, i) => (
+                <div key={i} className="flex items-start gap-3 text-base font-semibold text-gray-700">
+                  <Zap size={20} className="text-[#DB1E26] shrink-0 mt-1" /> {sign}
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 p-4 bg-white rounded-xl border border-[#DB1E26]/10 inline-block">
+              <p className="text-base font-bold text-[#2B5289] italic m-0">
+                "Ante cualquier duda, recomendamos comunicarse con la clínica para poder orientarte."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <PetCarousel />
+
       <section id="faq" className="w-full bg-gray-50 py-16 border-t border-gray-200">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-black text-[#2B5289] mb-10">Resolvemos tus dudas</h2>
@@ -438,7 +337,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* CONTACTO Y UBICACIÓN */}
       <section className="w-full bg-white py-16 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-black text-[#2B5289] mb-10">Contacto y ubicación</h2>
@@ -464,8 +362,6 @@ export default function App() {
         </div>
       </section>
 
-      { }
-      {/* FOOTER */}
       <footer className="w-full bg-[#1a3a5c] py-12 text-center text-white/60 px-6">
         <p className="text-white text-xl md:text-2xl font-bold mb-8 italic max-w-3xl mx-auto">"Comprometidos con una atención veterinaria cálida, profesional y disponible las 24 horas."</p>
         <div className="flex justify-center gap-6 mb-8 text-2xl">

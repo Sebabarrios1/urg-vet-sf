@@ -49,8 +49,8 @@ function PetCarousel() {
             <div className="overflow-hidden w-full" ref={emblaRef}>
                 <div className="flex touch-pan-y">
                     {PETS.map((pet, idx) => (
-                        <div key={idx} className="flex-none w-full md:w-1/4 min-w-0 px-3">
-                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg bg-gray-200">
+                        <div key={idx} className="px-3" style={{ flex: '0 0 300px', minWidth: 0 }}> {/* <--- ASÍ DEBE QUEDAR */}
+                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg group bg-gray-200">
                                 <img
                                     src={pet.img}
                                     alt={pet.name}
