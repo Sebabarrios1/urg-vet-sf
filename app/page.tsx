@@ -8,6 +8,7 @@ import {
   Phone, Mail, MapPin, Menu, MessageCircle,
   Star, Stethoscope, Activity, Zap
 } from 'lucide-react';
+import Image from 'next/image';
 
 // --- DATOS ACTUALIZADOS ---
 
@@ -144,10 +145,7 @@ const URGENCY_SIGNS = [
   "Falta de apetito y decaimiento."
 ];
 
-const PETS = [
-  { name: "Caninos", img: "/images/perro.jpg" },
-  { name: "Felinos", img: "/images/gato.jpg" }
-];
+<PetCarousel />
 
 function LoadingScreen() {
   const [loading, setLoading] = useState(true);
