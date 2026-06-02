@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
+import Image from 'next/image';
 import {
     BellRing, Clock, HeartPulse, Microscope,
     Scissors, Sun, Moon, Briefcase,
@@ -37,12 +38,7 @@ const PETS = [
 ];
 
 function PetCarousel() {
-    // Asegúrate de incluir 'slidesToScroll: 1' y 'dragFree: true' para un mejor movimiento
-    const [emblaRef] = useEmblaCarousel({
-        loop: true,
-        align: 'start',
-        slidesToScroll: 1
-    });
+    const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' });
 
     return (
         <section className="w-full py-16 bg-gray-50 border-t border-gray-200">
@@ -50,25 +46,24 @@ function PetCarousel() {
                 <h3 className="text-3xl font-black text-[#2B5289]">Nuestros Pacientes</h3>
             </div>
 
-            {/* El contenedor con ref={emblaRef} debe ser el "viewport" */}
-            <div className="overflow-hidden px-6" ref={emblaRef}>
-                <div className="flex gap-6">
+            {/* Añadimos un contenedor con ancho relativo */}
+            <div className="overflow-hidden w-full" ref={emblaRef}>
+                <div className="flex gap-4 px-6">
                     {PETS.map((pet, idx) => (
-                        // CAMBIO AQUÍ: flex-[0_0_25%] significa que cada slide ocupa el 25% del ancho (4 imágenes visibles)
-                        // Puedes cambiar 25% por 20% (5 imágenes) o 33% (3 imágenes)
-                        <div key={idx} className="flex-[0_0_25%] min-w-0">
-                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg group bg-gray-200">
+                        // flex-[0_0_100%] en móvil, flex-[0_0_25%] (4 por fila) en escritorio
+                        <div key={idx} className="flex-[0_0_100%] md:flex-[0_0_25%] min-w-0">
+                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg bg-gray-200">
                                 <img
                                     src={pet.img}
                                     alt={pet.name}
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                                    className="w-full h-full object-cover"
                                     onError={(e) => {
                                         const target = e.target as HTMLImageElement;
                                         target.src = 'https://via.placeholder.com/300';
                                     }}
                                 />
-                                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
-                                    <p className="text-white text-lg font-black">{pet.name}</p>
+                                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+                                    <p className="text-white font-black truncate">{pet.name}</p>
                                 </div>
                             </div>
                         </div>
