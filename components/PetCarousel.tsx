@@ -37,25 +37,37 @@ const PETS = [
 ];
 
 function PetCarousel() {
-    const [emblaRef] = useEmblaCarousel({ loop: true, align: 'start' });
+    // Asegúrate de incluir 'slidesToScroll: 1' y 'dragFree: true' para un mejor movimiento
+    const [emblaRef] = useEmblaCarousel({
+        loop: true,
+        align: 'start',
+        slidesToScroll: 1
+    });
 
     return (
         <section className="w-full py-16 bg-gray-50 border-t border-gray-200">
             <div className="max-w-6xl mx-auto px-6 mb-10">
                 <h3 className="text-3xl font-black text-[#2B5289]">Nuestros Pacientes</h3>
             </div>
+
+            {/* El contenedor con ref={emblaRef} debe ser el "viewport" */}
             <div className="overflow-hidden px-6" ref={emblaRef}>
-                <div className="flex gap-6 max-w-6xl mx-auto">
+                <div className="flex gap-6">
                     {PETS.map((pet, idx) => (
-                        <div key={idx} className="flex-[0_0_20%] min-w-0">
-                            <div className="relative h-64 rounded-2xl overflow-hidden shadow-lg group bg-gray-200">
+                        // CAMBIO AQUÍ: flex-[0_0_25%] significa que cada slide ocupa el 25% del ancho (4 imágenes visibles)
+                        // Puedes cambiar 25% por 20% (5 imágenes) o 33% (3 imágenes)
+                        <div key={idx} className="flex-[0_0_25%] min-w-0">
+                            <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg group bg-gray-200">
                                 <img
                                     src={pet.img}
                                     alt={pet.name}
                                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                                    onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/300'; }}
+                                    onError={(e) => {
+                                        const target = e.target as HTMLImageElement;
+                                        target.src = 'https://via.placeholder.com/300';
+                                    }}
                                 />
-                                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+                                <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 to-transparent">
                                     <p className="text-white text-lg font-black">{pet.name}</p>
                                 </div>
                             </div>
