@@ -46,9 +46,27 @@ const SERVICES = [
 ];
 
 const SPECIALTIES = [
-  { title: "ECOGRAFÍA", specialist: "Tamara Silvetti", desc: "Diagnóstico por imágenes mediante ecografías.", icon: <Monitor size={20} /> },
-  { title: "DERMATOLOGÍA", specialist: "Valeria Gálvez", desc: "Diagnóstico y tratamiento de enfermedades de la piel.", icon: <Stethoscope size={20} /> },
-  { title: "CARDIOLOGÍA", specialist: "Nicolás Picciochi", desc: "Evaluación cardiológica y estudios especializados.", icon: <Activity size={20} /> }
+  {
+    title: "ECOGRAFÍA",
+    specialist: "Tamara Silvetti",
+    desc: "Diagnóstico por imágenes mediante ecografías.",
+    icon: <Monitor size={18} />,
+    img: "/images/Tamara silvetti.jpeg" // La foto de la chica con el gato blanco
+  },
+  {
+    title: "DERMATOLOGÍA",
+    specialist: "Valeria Gálvez",
+    desc: "Diagnóstico y tratamiento de la piel.",
+    icon: <Stethoscope size={18} />,
+    img: "/images/nico.jpeg" // La foto de la chica con el gato atigrado
+  },
+  {
+    title: "CARDIOLOGÍA",
+    specialist: "Nicolás Picciochi",
+    desc: "Evaluación cardiológica y estudios especializados.",
+    icon: <Activity size={18} />,
+    img: "/images/Valeria Gálvez.jpeg" // La foto del chico con ambo celeste
+  }
 ];
 
 const TEAM = [
@@ -277,20 +295,49 @@ export default function App() {
       </section>
 
       {/* SECCIÓN 3: ESPECIALIDADES (Movido aquí y actualizado con nombres) */}
+      {/* SECCIÓN 3: ESPECIALIDADES (Tarjetas similares al equipo pero más compactas) */}
       <section className="w-full py-16 bg-white border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="mb-8">
+          <div className="mb-10">
             <h3 className="text-2xl font-black text-[#2B5289]">Especialidades Médicas</h3>
-            <p className="text-gray-600 font-semibold text-lg mt-2">Atención con profesionales externos especializados y turnos programados gestionados por la clínica.</p>
+            <p className="text-gray-600 font-semibold text-lg mt-2">Atención con profesionales externos especializados.</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SPECIALTIES.map((spec, i) => (
-              <div key={i} className="bg-gray-50 p-6 rounded-xl shadow-sm border border-gray-200 flex items-start gap-4">
-                <div className="text-[#DB1E26] mt-1">{spec.icon}</div>
-                <div>
-                  <h4 className="font-black text-base text-gray-800 uppercase">{spec.title}</h4>
-                  <p className="text-sm text-[#2B5289] font-black mt-1 mb-2">{spec.specialist}</p>
-                  <p className="text-xs text-gray-500 font-medium leading-relaxed">{spec.desc}</p>
+              <div key={i} className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm flex border border-gray-200 hover:border-[#2B5289]/30 transition-colors">
+                {/* Imagen más pequeña (w-24) para menor protagonismo */}
+                <div className="w-24 bg-gray-200 shrink-0 relative">
+                  <img
+                    src={spec.img}
+                    alt={spec.specialist}
+                    className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://via.placeholder.com/150?text=Vet';
+                    }}
+                  />
+                </div>
+
+                <div className="p-4 flex-1 flex flex-col justify-center">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-[#DB1E26] shrink-0">{spec.icon}</span>
+                    <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                      Externo
+                    </span>
+                  </div>
+
+                  <h4 className="font-black text-gray-800 text-base leading-tight">
+                    {spec.specialist}
+                  </h4>
+
+                  <p className="text-xs font-bold text-[#2B5289] mt-0.5 uppercase tracking-tighter">
+                    {spec.title}
+                  </p>
+
+                  <p className="text-[11px] text-gray-500 font-medium leading-tight mt-2 italic">
+                    {spec.desc}
+                  </p>
                 </div>
               </div>
             ))}
