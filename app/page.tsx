@@ -288,15 +288,19 @@ export default function App() {
           </div>
         </div>
       </div>
-
       <section id="servicios" className="w-full py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-black text-[#2B5289] mb-12 uppercase tracking-tight">Nuestras Áreas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s, idx) => (
               <div key={idx} className={`rounded-2xl p-8 transition-all hover:shadow-xl ${s.urgent ? 'bg-[#DB1E26] text-white' : 'bg-[#2B5289] text-white'}`}>
-                <div className="mb-4 opacity-80">{s.icon}</div>
-                <h3 className="text-2xl font-black mb-3 leading-tight">{s.title}</h3>
+
+                {/* Contenedor Flex para alinear el ícono y el título horizontalmente */}
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="opacity-80 shrink-0">{s.icon}</div>
+                  <h3 className="text-2xl font-black leading-tight m-0">{s.title}</h3>
+                </div>
+
                 <p className="text-sm opacity-90 leading-relaxed font-medium">{s.desc}</p>
               </div>
             ))}
