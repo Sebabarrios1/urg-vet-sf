@@ -9,7 +9,25 @@ import {
   Star, Stethoscope, Activity, Zap
 } from 'lucide-react';
 import Image from 'next/image';
-
+const Instagram = ({ size = 24, color = "currentColor", className = "", ...props }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={className}
+    {...props}
+  >
+    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+  </svg>
+);
 const PETS = [
   { name: "Ámbar Favini", img: "/images/Ámbar Favini.jpeg" },
   { name: "Helvetica Rodríguez", img: "/images/Helvetica Rodríguez.jpeg" },
@@ -51,21 +69,21 @@ const SPECIALTIES = [
     specialist: "Tamara Silvetti",
     desc: "Diagnóstico por imágenes mediante ecografías.",
     icon: <Monitor size={18} />,
-    img: "/images/Tamara silvetti.jpeg" // La foto de la chica con el gato blanco
+    img: "/images/Tamara silvetti.jpeg"
   },
   {
     title: "DERMATOLOGÍA",
     specialist: "Valeria Gálvez",
     desc: "Diagnóstico y tratamiento de la piel.",
     icon: <Stethoscope size={18} />,
-    img: "/images/nico.jpeg" // La foto de la chica con el gato atigrado
+    img: "/images/nico.jpeg"
   },
   {
     title: "CARDIOLOGÍA",
     specialist: "Nicolás Picciochi",
     desc: "Evaluación cardiológica y estudios especializados.",
     icon: <Activity size={18} />,
-    img: "/images/Valeria Gálvez.jpeg" // La foto del chico con ambo celeste
+    img: "/images/Valeria Gálvez.jpeg"
   }
 ];
 
@@ -156,15 +174,42 @@ function PetCarousel() {
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showFloating, setShowFloating] = useState(false);
+
   const WHATSAPP_NUMBER = "5493425502341";
   const PHONE_NUMBER = "3425502341";
+  const INSTAGRAM_URL = "https://www.instagram.com/urgencias.veterinarias.sf?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+  const WHATSAPP_MESSAGE = "¡Hola! Vengo desde la página web y me gustaría hacer una consulta.";
+  const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  // Lógica para mostrar botones flotantes al scrollear
+  useEffect(() => {
+    const handleScroll = () => {
+      // Muestra los botones después de scrollear 400px (cuando salen los del header)
+      if (window.scrollY > 400) {
+        setShowFloating(true);
+      } else {
+        setShowFloating(false);
+      }
+    };
 
-  const WHATSAPP_TEXT = encodeURIComponent("¡Hola! Me comunico desde la página web para realizar una consulta.");
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
-    <div className="font-sans min-h-screen bg-white" style={{ fontFamily: "'League Spartan', sans-serif" }}>
+    <div className="font-sans min-h-screen bg-white relative" style={{ fontFamily: "'League Spartan', sans-serif" }}>
       <LoadingScreen />
       <style dangerouslySetInnerHTML={{ __html: "@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700;900&display=swap');" }} />
+
+      {/* Botones Flotantes */}
+      <div className={`fixed bottom-6 right-6 z-50 flex flex-col gap-3 transition-all duration-300 ${showFloating ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+        <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="w-14 h-14 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-lg shadow-green-900/20 hover:scale-110 transition-transform">
+          <MessageCircle size={28} />
+        </a>
+        <a href={`tel:${PHONE_NUMBER}`} className="w-14 h-14 bg-[#DB1E26] text-white rounded-full flex items-center justify-center shadow-lg shadow-red-900/20 hover:scale-110 transition-transform">
+          <Phone size={28} />
+        </a>
+      </div>
 
       <nav className="bg-[#2B5289] w-full border-b border-white/10 sticky top-0 z-40">
         <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
@@ -210,7 +255,7 @@ export default function App() {
               <a href={`tel:${PHONE_NUMBER}`} className="bg-[#DB1E26] hover:bg-[#c51921] text-white text-lg font-extrabold py-4 px-8 rounded-xl flex items-center justify-center gap-3 shadow-lg shadow-red-900/40 transition-transform hover:-translate-y-1">
                 <Phone size={24} /> Llamar ahora
               </a>
-              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" className="bg-white hover:bg-slate-50 text-[#2B5289] text-lg font-extrabold py-4 px-8 rounded-xl flex items-center justify-center gap-3 shadow-md transition-transform hover:-translate-y-1">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="bg-white hover:bg-slate-50 text-[#2B5289] text-lg font-extrabold py-4 px-8 rounded-xl flex items-center justify-center gap-3 shadow-md transition-transform hover:-translate-y-1">
                 <MessageCircle size={24} className="text-[#25D366]" /> Turnos e informes
               </a>
             </div>
@@ -244,7 +289,6 @@ export default function App() {
         </div>
       </div>
 
-      {/* SECCIÓN 1: SERVICIOS */}
       <section id="servicios" className="w-full py-16 md:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl md:text-5xl font-black text-[#2B5289] mb-12 uppercase tracking-tight">Nuestras Áreas</h2>
@@ -260,7 +304,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* SECCIÓN 2: EQUIPO (Movido aquí) */}
       <section id="equipo" className="w-full bg-gray-50 py-16 md:py-24 border-t border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-4xl font-black text-[#2B5289] mb-4">Conocé a nuestro equipo</h2>
@@ -294,8 +337,6 @@ export default function App() {
         </div>
       </section>
 
-      {/* SECCIÓN 3: ESPECIALIDADES (Movido aquí y actualizado con nombres) */}
-      {/* SECCIÓN 3: ESPECIALIDADES (Tarjetas similares al equipo pero más compactas) */}
       <section className="w-full py-16 bg-white border-y border-gray-200">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-10">
@@ -306,7 +347,6 @@ export default function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SPECIALTIES.map((spec, i) => (
               <div key={i} className="bg-gray-50 rounded-2xl overflow-hidden shadow-sm flex border border-gray-200 hover:border-[#2B5289]/30 transition-colors">
-                {/* Imagen más pequeña (w-24) para menor protagonismo */}
                 <div className="w-24 bg-gray-200 shrink-0 relative">
                   <img
                     src={spec.img}
@@ -393,9 +433,13 @@ export default function App() {
                 <div className="w-14 h-14 rounded-full bg-[#DB1E26] text-white flex items-center justify-center shrink-0 shadow-lg shadow-red-200 transition-transform group-hover:scale-110"><Phone size={24} /></div>
                 <div><div className="text-[11px] font-black text-gray-400 tracking-widest uppercase mb-1">Urgencias 24 hs</div><div className="text-2xl font-black text-gray-800">{PHONE_NUMBER}</div></div>
               </a>
-              <a href={`https://wa.me/${WHATSAPP_NUMBER}`} target="_blank" rel="noreferrer" className="flex items-center gap-5 group no-underline">
+              <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="flex items-center gap-5 group no-underline">
                 <div className="w-14 h-14 rounded-full bg-white border border-gray-300 text-[#25D366] flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-110"><MessageCircle size={28} /></div>
                 <div><div className="text-[11px] font-black text-gray-400 tracking-widest uppercase mb-1">Turnos e informes</div><div className="text-2xl font-black text-gray-800">WhatsApp</div></div>
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="flex items-center gap-5 group no-underline">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-tr from-[#f09433] via-[#dc2743] to-[#bc1888] text-white flex items-center justify-center shrink-0 shadow-sm transition-transform group-hover:scale-110"><Instagram size={28} /></div>
+                <div><div className="text-[11px] font-black text-gray-400 tracking-widest uppercase mb-1">Seguinos</div><div className="text-2xl font-black text-gray-800">Instagram</div></div>
               </a>
               <div className="flex items-center gap-5">
                 <div className="w-14 h-14 rounded-full bg-[#2B5289] text-white flex items-center justify-center shrink-0"><MapPin size={24} /></div>
@@ -412,10 +456,16 @@ export default function App() {
       <footer className="w-full bg-[#1a3a5c] py-12 text-center text-white/60 px-6">
         <p className="text-white text-xl md:text-2xl font-bold mb-8 italic max-w-3xl mx-auto">"Comprometidos con una atención veterinaria cálida, profesional y disponible las 24 horas."</p>
         <div className="flex justify-center gap-6 mb-8 text-2xl">
+          <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><Instagram size={28} /></a>
           <a href="#" className="hover:text-white transition-colors"><Mail size={28} /></a>
-          <a href={`https://wa.me/${WHATSAPP_NUMBER}`} className="hover:text-white transition-colors"><MessageCircle size={28} /></a>
+          <a href={WHATSAPP_URL} target="_blank" rel="noreferrer" className="hover:text-white transition-colors"><MessageCircle size={28} /></a>
         </div>
         <div className="text-sm font-medium">© 2026 Urgencias Veterinarias Santa Fe · Todos los derechos reservados</div>
+
+        {/* Marca de agua discreta */}
+        <div className="mt-4 text-xs font-medium text-white/30">
+          Diseño y desarrollo web por <a href="https://www.linkedin.com/in/roberto-sebastian-barrios" target="_blank" rel="noreferrer" className="hover:text-white/60 transition-colors">Roberto Barrios</a>
+        </div>
       </footer>
     </div>
   );
