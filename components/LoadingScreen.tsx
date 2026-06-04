@@ -1,13 +1,19 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
 
 export default function LoadingScreen() {
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        // Simulamos un pequeño tiempo de carga para que el efecto se vea fluido
-        const timer = setTimeout(() => setLoading(false), 1500);
+        const alreadySeen = sessionStorage.getItem('loadingSeen');
+        if (alreadySeen) return;
+
+        setLoading(true);
+        const timer = setTimeout(() => {
+            setLoading(false);
+            sessionStorage.setItem('loadingSeen', 'true');
+        }, 800);
+
         return () => clearTimeout(timer);
     }, []);
 
@@ -16,8 +22,7 @@ export default function LoadingScreen() {
     return (
         <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#2B5289]">
             <div className="animate-pulse flex flex-col items-center">
-                {/* Aquí puedes usar tu logo */}
-                <h2 className="text-white text-2xl font-black tracking-widest uppercase">
+                <h2 className="text-white text-2xl font-black tracking-widest uppercase text-center">
                     URGENCIAS<br />VETERINARIAS<br />SANTA FE
                 </h2>
             </div>
