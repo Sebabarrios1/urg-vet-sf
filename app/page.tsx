@@ -45,7 +45,7 @@ const PETS = [
   { name: "Carpuza Beutel", img: "/images/Carpuza Beutel.jpeg" },
   { name: "Roma Beutel", img: "/images/Roma Beutel.jpeg" },
   { name: "Cuasimodo", img: "/images/Cuasimodo.jpeg" },
-  { name: "Umma Martínez", img: "/images/Umma Martínez.jpeg" },
+  { name: "Uma Martínez", img: "/images/Umma Martínez.jpeg" },
   { name: "Martina Basualdo", img: "/images/Martina Basualdo.jpeg" },
   { name: "Rumi Nicola", img: "/images/Rumi Nicola.jpeg" },
   { name: "Nova Pintos", img: "/images/Nova Pintos.jpeg" },
@@ -55,6 +55,8 @@ const PETS = [
   { name: "Aquiles Ramírez", img: "/images/Aquiles Ramírez.jpeg" },
   { name: "Minerva Rotela", img: "/images/Minerva Rotela.jpeg" },
   { name: "Rocky Sastre", img: "/images/Rocky Sastre.jpeg" },
+  { name: "Maby y Moly Carabajal", img: "/images/Tito Cosentino.jpeg" },
+  { name: "Tito Cosentino", img: "/images/Maby y Moly Carabajal.jpeg" }
 ];
 
 const SERVICES = [
@@ -93,7 +95,7 @@ const TEAM = [
   { name: "Yanina Parra", role: "Jefa de área Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, img: "/images/yanina_parra_.jpeg", facePos: "center 15%" },
   { name: "Antonella Ledezma", role: "Veterinaria Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, img: "/images/antonella_ledezma_.jpeg", facePos: "center 10%" },
   { name: "Juan Del Prete", role: "Veterinario Clínico", shift: "Turno mañana/tarde", type: "clinic", icon: <Briefcase size={14} />, img: "/images/juan_del_prete_.jpeg", facePos: "center 5%" },
-  { name: "Luis Prieto", role: "Veterinario Clínico", shift: "Turno tarde", type: "clinic", icon: <Sunset size={14} />, img: "/images/Luis_Prieto.jpeg", facePos: "center top" },
+  { name: "Luis Prieto", role: "Jefe de laboratorio", shift: "Turno tarde", type: "clinic", icon: <Sunset size={14} />, img: "/images/Luis_Prieto.jpeg", facePos: "center top" },
   { name: "Federico Modini", role: "Veterinario Internista", shift: "Turno tarde", type: "emergent", icon: <Sunset size={14} />, img: "/images/Federico_Modini.jpeg", facePos: "center 10%" },
   { name: "Eliana Ramírez", role: "Jefa de internación y coordinadora general", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "/images/eliana_ramirez.jpeg", facePos: "center 12%" },
   { name: "Juan Torti", role: "Veterinario internista y emergentólogo", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "/images/Juan_Torti.jpeg", facePos: "center 20%" },
@@ -511,7 +513,7 @@ export default function App() {
         <div className="mt-4 text-xs font-medium text-white/30">
           Diseño y desarrollo web por{' '}
           <a href="https://www.linkedin.com/in/roberto-sebastian-barrios" target="_blank" rel="noreferrer" className="hover:text-white/60 transition-colors">
-            Roberto Barrios
+            Sebastián Barrios
           </a>
         </div>
       </footer>
