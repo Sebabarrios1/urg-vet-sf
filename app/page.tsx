@@ -95,8 +95,8 @@ const TEAM = [
   { name: "Yanina Parra", role: "Jefa de área Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, img: "/images/yanina_parra_.jpeg", facePos: "center 15%" },
   { name: "Antonella Ledezma", role: "Veterinaria Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, img: "/images/antonella_ledezma_.jpeg", facePos: "center 10%" },
   { name: "Juan Del Prete", role: "Veterinario Clínico", shift: "Turno mañana/tarde", type: "clinic", icon: <Briefcase size={14} />, img: "/images/juan_del_prete_.jpeg", facePos: "center 5%" },
-  { name: "Luis Prieto", role: "Jefe de laboratorio", shift: "Turno tarde", type: "clinic", icon: <Sunset size={14} />, img: "/images/Luis_Prieto.jpeg", facePos: "center top" },
-  { name: "Federico Modini", role: "Veterinario Internista", shift: "Turno tarde", type: "emergent", icon: <Sunset size={14} />, img: "/images/Federico_Modini.jpeg", facePos: "center 10%" },
+  { name: "Luis Prieto", role: "Veterinario Clínico", shift: "Turno tarde", type: "clinic", icon: <Sunset size={14} />, img: "/images/Luis_Prieto.jpeg", facePos: "center top" },
+  { name: "Federico Modini", role: "Jefe de laboratorio", shift: "Turno tarde", type: "emergent", icon: <Sunset size={14} />, img: "/images/Federico_Modini.jpeg", facePos: "center 10%" },
   { name: "Eliana Ramírez", role: "Jefa de internación y coordinadora general", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "/images/eliana_ramirez.jpeg", facePos: "center 12%" },
   { name: "Juan Torti", role: "Veterinario internista y emergentólogo", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "/images/Juan_Torti.jpeg", facePos: "center 20%" },
 ];
