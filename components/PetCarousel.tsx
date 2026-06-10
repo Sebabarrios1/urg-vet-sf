@@ -34,7 +34,7 @@ const PETS = [
     { name: "Kitty Anacabe", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Kitty_Anacabe_jfdkrq.jpg" },
     { name: "Aquiles Ramírez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Aquiles_Ram%C3%ADrez_shxq4h.jpg" },
     { name: "Minerva Rotela", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Minerva_Rotela_zhyflo.jpg" },
-    { name: "Rocky Sastre", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rocky_Sastre_zmxqmr.jpg" }
+    { name: "Rocky Sastre", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rocky_Sastre_zmxqmr.jpg" },
     { name: "Maby y Moly Carabajal", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Maby_y_Moly_Carabajal_tc9hvi.jpg" },
     { name: "Tito Cosentino", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Tito_Cosentino_woroap.jpg" }
 ];
