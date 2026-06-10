@@ -45,7 +45,7 @@ const PETS = [
     { name: "Carpuza Beutel", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Carpuza_Beutel_riy982.jpg" },
     { name: "Roma Beutel", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Roma_Beutel_wbpzed.jpg" },
     { name: "Cuasimodo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Cuasimodo_bzg4pd.jpg" },
-    { name: "Umma Martínez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118857/Umma_Mart%C3%ADnez_iftdkk.jpg" },
+    { name: "Uma Martínez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118857/Umma_Mart%C3%ADnez_iftdkk.jpg" },
     { name: "Martina Basualdo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Martina_Basualdo_uutl1w.jpg" },
     { name: "Rumi Nicola", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rumi_Nicola_ntkpoi.jpg" },
     { name: "Nova Pintos", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Nova_Pintos_mccrbb.jpg" },
@@ -55,10 +55,9 @@ const PETS = [
     { name: "Aquiles Ramírez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Aquiles_Ram%C3%ADrez_shxq4h.jpg" },
     { name: "Minerva Rotela", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Minerva_Rotela_zhyflo.jpg" },
     { name: "Rocky Sastre", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rocky_Sastre_zmxqmr.jpg" },
-    { name: "Maby y Moly Carabajal", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Maby_y_Moly_Carabajal_tc9hvi.jpg" },
-    { name: "Tito Cosentino", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Tito_Cosentino_woroap.jpg" }
+    { name: "Maby y Moly Carabajal", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Tito_Cosentino_woroap.jpg" },
+    { name: "Tito Cosentino", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Maby_y_Moly_Carabajal_tc9hvi.jpg" }
 ];
-
 
 const SERVICES = [
   { title: "URGENCIAS 24 HORAS", desc: "Atención inmediata todos los días del año, incluidos feriados.", icon: <BellRing size={24} />, urgent: true },
