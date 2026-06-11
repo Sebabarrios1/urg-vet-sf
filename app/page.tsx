@@ -95,11 +95,11 @@ const TEAM = [
   { name: "Yanina Parra", role: "Jefa de área Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118863/yanina_parra__e78xxl.jpg", facePos: "center 15%" },
   { name: "Antonella Ledezma", role: "Veterinaria Clínica", shift: "Turno mañana", type: "clinic", icon: <Sun size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118862/antonella_ledezma__ma7fle.jpg", facePos: "center 10%" },
   { name: "Juan Del Prete", role: "Veterinario Clínico", shift: "Turno mañana/tarde", type: "clinic", icon: <Briefcase size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118862/juan_del_prete__j7rbnd.jpg", facePos: "center 5%" },
+  { name: "Celeste Facelli", role: "Veterinaria Clínica", shift: "Guardias", type: "clinic", icon: <Sun size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781205369/IMG-20260611-WA0072_ufihx1.jpg", facePos: "center 10%" },
   { name: "Luis Prieto", role: "Veterinario Clínico", shift: "Turno tarde", type: "clinic", icon: <Sunset size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118863/Luis_Prieto_aco2ma.jpg", facePos: "center top" },
   { name: "Federico Modini", role: "Jefe de laboratorio", shift: "Turno tarde", type: "emergent", icon: <Sunset size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118863/Federico_Modini_dmrhgg.jpg", facePos: "center 10%" },
   { name: "Eliana Ramírez", role: "Jefa de internación y coordinadora general", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118862/eliana_ramirez_l3g8fu.jpg", facePos: "center 12%" },
   { name: "Juan Torti", role: "Veterinario internista y emergentólogo", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118863/Juan_Torti_tipaad.jpg", facePos: "center 20%" },
-  { name: "Celeste Facelli", role: "Veterinaria Clínica", shift: "Guardias", type: "clinic", icon: <Sun size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781205369/IMG-20260611-WA0072_ufihx1.jpg", facePos: "center 10%" },
 
 ];
 
