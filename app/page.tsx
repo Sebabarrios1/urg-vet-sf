@@ -31,32 +31,32 @@ const Instagram = ({ size = 24, color = "currentColor", className = "", ...props
 );
 
 const PETS = [
-    { name: "Ámbar Favini", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/%C3%81mbar_Favini_os3nwx.jpg" },
-    { name: "Helvetica Rodríguez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Helvetica_Rodr%C3%ADguez_nair8b.jpg" },
-    { name: "Saori Gallotto", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Saori_Gallotto_st8goj.jpg" },
-    { name: "Aurora Gallotto", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Aurora_Gallotto_jklkyf.jpg" },
-    { name: "Pancho Fridman", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Pancho_Fridman_z8xdnf.jpg" },
-    { name: "Raul Leopold", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Raul_Leopold_mjmlu4.jpg" },
-    { name: "Coco Paye", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Coco_Paye_oubmmu.jpg" },
-    { name: "Loli Delvo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Loli_Delvo_eswrl8.jpg" },
-    { name: "Dracco Sesma", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Dracco_Sesma_zcy4z4.jpg" },
-    { name: "Cleo Sambade", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Cleo_Sambade_y8vkts.jpg" },
-    { name: "Kakashi Silvestrini", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Kakashi_Silvestrini_htht0q.jpg" },
-    { name: "Carpuza Beutel", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Carpuza_Beutel_riy982.jpg" },
-    { name: "Roma Beutel", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Roma_Beutel_wbpzed.jpg" },
-    { name: "Cuasimodo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Cuasimodo_bzg4pd.jpg" },
-    { name: "Uma Martínez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118857/Umma_Mart%C3%ADnez_iftdkk.jpg" },
-    { name: "Martina Basualdo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Martina_Basualdo_uutl1w.jpg" },
-    { name: "Rumi Nicola", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rumi_Nicola_ntkpoi.jpg" },
-    { name: "Nova Pintos", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Nova_Pintos_mccrbb.jpg" },
-    { name: "Olivia Angelini", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Olivia_Angelini_uad4tw.jpg" },
-    { name: "Jagger Villalobos", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Jagger_Villalobos_qpdh3k.jpg" },
-    { name: "Kitty Anacabe", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Kitty_Anacabe_jfdkrq.jpg" },
-    { name: "Aquiles Ramírez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Aquiles_Ram%C3%ADrez_shxq4h.jpg" },
-    { name: "Minerva Rotela", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Minerva_Rotela_zhyflo.jpg" },
-    { name: "Rocky Sastre", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rocky_Sastre_zmxqmr.jpg" },
-    { name: "Maby y Moly Carabajal", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Tito_Cosentino_woroap.jpg" },
-    { name: "Tito Cosentino", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Maby_y_Moly_Carabajal_tc9hvi.jpg" }
+  { name: "Ámbar Favini", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/%C3%81mbar_Favini_os3nwx.jpg" },
+  { name: "Helvetica Rodríguez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Helvetica_Rodr%C3%ADguez_nair8b.jpg" },
+  { name: "Saori Gallotto", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Saori_Gallotto_st8goj.jpg" },
+  { name: "Aurora Gallotto", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Aurora_Gallotto_jklkyf.jpg" },
+  { name: "Pancho Fridman", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Pancho_Fridman_z8xdnf.jpg" },
+  { name: "Raul Leopold", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Raul_Leopold_mjmlu4.jpg" },
+  { name: "Coco Paye", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Coco_Paye_oubmmu.jpg" },
+  { name: "Loli Delvo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Loli_Delvo_eswrl8.jpg" },
+  { name: "Dracco Sesma", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Dracco_Sesma_zcy4z4.jpg" },
+  { name: "Cleo Sambade", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118861/Cleo_Sambade_y8vkts.jpg" },
+  { name: "Kakashi Silvestrini", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Kakashi_Silvestrini_htht0q.jpg" },
+  { name: "Carpuza Beutel", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Carpuza_Beutel_riy982.jpg" },
+  { name: "Roma Beutel", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Roma_Beutel_wbpzed.jpg" },
+  { name: "Cuasimodo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Cuasimodo_bzg4pd.jpg" },
+  { name: "Uma Martínez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118857/Umma_Mart%C3%ADnez_iftdkk.jpg" },
+  { name: "Martina Basualdo", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Martina_Basualdo_uutl1w.jpg" },
+  { name: "Rumi Nicola", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rumi_Nicola_ntkpoi.jpg" },
+  { name: "Nova Pintos", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Nova_Pintos_mccrbb.jpg" },
+  { name: "Olivia Angelini", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Olivia_Angelini_uad4tw.jpg" },
+  { name: "Jagger Villalobos", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118860/Jagger_Villalobos_qpdh3k.jpg" },
+  { name: "Kitty Anacabe", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Kitty_Anacabe_jfdkrq.jpg" },
+  { name: "Aquiles Ramírez", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Aquiles_Ram%C3%ADrez_shxq4h.jpg" },
+  { name: "Minerva Rotela", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Minerva_Rotela_zhyflo.jpg" },
+  { name: "Rocky Sastre", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118859/Rocky_Sastre_zmxqmr.jpg" },
+  { name: "Maby y Moly Carabajal", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Tito_Cosentino_woroap.jpg" },
+  { name: "Tito Cosentino", img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118858/Maby_y_Moly_Carabajal_tc9hvi.jpg" }
 ];
 
 const SERVICES = [
@@ -99,6 +99,8 @@ const TEAM = [
   { name: "Federico Modini", role: "Jefe de laboratorio", shift: "Turno tarde", type: "emergent", icon: <Sunset size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118863/Federico_Modini_dmrhgg.jpg", facePos: "center 10%" },
   { name: "Eliana Ramírez", role: "Jefa de internación y coordinadora general", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118862/eliana_ramirez_l3g8fu.jpg", facePos: "center 12%" },
   { name: "Juan Torti", role: "Veterinario internista y emergentólogo", shift: "Guardia nocturna", type: "emergent", icon: <Moon size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781118863/Juan_Torti_tipaad.jpg", facePos: "center 20%" },
+  { name: "Celeste Facelli", role: "Veterinaria Clínica", shift: "Guardias", type: "clinic", icon: <Sun size={14} />, img: "https://res.cloudinary.com/duu7tqecw/image/upload/v1781205369/IMG-20260611-WA0072_ufihx1.jpg", facePos: "center 10%" },
+
 ];
 
 const FAQS = [
