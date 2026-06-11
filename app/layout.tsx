@@ -64,6 +64,10 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  icons: {
+    icon: "/images/logo.jpg",
+    // Si llegás a armar un archivo .png o .ico dedicado, ponés su ruta acá, ej: "/favicon.ico"
+  },
 };
 
 const jsonLd = {
