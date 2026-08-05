@@ -9,6 +9,7 @@ import {
   Star, Stethoscope, Activity, Zap
 } from 'lucide-react';
 import LoadingScreen from '@/components/LoadingScreen';
+import RelocationNotice from '@/components/RelocationNotice';
 
 const Instagram = ({ size = 24, color = "currentColor", className = "", ...props }: React.SVGProps<SVGSVGElement> & { size?: number; color?: string }) => (
   <svg
@@ -202,7 +203,7 @@ export default function App() {
           <Phone size={28} />
         </a>
       </div>
-
+          <RelocationNotice />
       <nav className="bg-[#2B5289] w-full border-b border-white/10 sticky top-0 z-40" aria-label="Navegación principal">
         <div className="max-w-6xl mx-auto px-6 h-[70px] flex items-center justify-between">
           <a href="#" className="flex items-center gap-3 text-white no-underline" aria-label="Urgencias Veterinarias Santa Fe - Inicio">
