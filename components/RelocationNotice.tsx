@@ -59,7 +59,7 @@ export default function RelocationNotice() {
           <X size={18} />
         </button>
 
-        <div className="bg-[#2B5289] px-4 py-2.5 pr-9 flex items-center gap-2">
+        <div className="bg-[#DB1E26] px-4 py-2.5 pr-9 flex items-center gap-2">
           <Home size={16} className="text-white shrink-0" aria-hidden="true" />
           <span className="text-white font-semibold text-sm">{NOTICE_TITLE}</span>
         </div>
@@ -79,7 +79,7 @@ export default function RelocationNotice() {
           <p className="text-slate-600 text-sm leading-relaxed">{NOTICE_CLOSING}</p>
 
           <div className="flex justify-center">
-            <span className="inline-block text-xs font-semibold tracking-wide text-[#2B5289] bg-[#2B5289]/10 rounded-full px-3 py-1">
+            <span className="inline-block text-xs font-semibold tracking-wide text-[#DB1E26] bg-[#DB1E26]/10 rounded-full px-3 py-1">
               ✨ PRÓXIMAMENTE ✨
             </span>
           </div>
