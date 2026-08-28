@@ -483,13 +483,13 @@ export default function App() {
                 <div className="w-14 h-14 rounded-full bg-[#2B5289] text-white flex items-center justify-center shrink-0" aria-hidden="true"><MapPin size={24} /></div>
                 <div>
                   <div className="text-[11px] font-black text-gray-400 tracking-widest uppercase mb-1">Dirección</div>
-                  <div className="text-xl font-black text-gray-800">Av. Gral. Paz 7623, Santa Fe</div>
+                  <div className="text-xl font-black text-gray-800">Marcial Candioti 3129, Santa Fe</div>
                 </div>
               </div>
             </address>
             <div className="h-[350px] rounded-3xl overflow-hidden shadow-lg border border-gray-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d849.540571083117!2d-60.67532483042777!3d-31.60201269838605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b500ab520da02d%3A0x919d6046a8d038e5!2sAv.%20Gral.%20Paz%207623%2C%20S3000%20Santa%20Fe%20de%20la%20Vera%20Cruz%2C%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1779395438059!5m2!1ses-419!2sar"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6793.501352461792!2d-60.6966192!3d-31.64067620000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b507670a23fb9d%3A0x91bf46d71b82fba!2sUrgencias%20Veterinarias%20Santa%20Fe!5e0!3m2!1ses-419!2sar!4v1787946202899!5m2!1ses-419!2sar"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
